@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Уровень 1 </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <link rel="stylesheet" href="../css/common.css"> -->
+    
+<script defer src="index.bundle.js"></script></head>
+<body>
+
+<div class=" blur">
+	<p>Правила уровня 1:</p>
+	<p>- Почувствуйте себя ребенком, просто соберите пирамидку без правил.</p>
+	<p>- Надо собрать пирамидку из 5 блоков</p>
+    <div class="auth"></div>
+	<div class = "root"></div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => {
+            const name = prompt('Введите имя пользователя', '') || 'guest'
+            localStorage.setItem('currentUser', name);
+            document.querySelector('.auth').innerHTML = `Вы авторизовались как ${name}`
+
+            new window.Game({
+                rootNode: document.querySelector('.root'),
+                username: name,
+                level: 1,
+                dropInterval: 2,
+                dropSpeed: 10,
+                checkSize: false,
+                checkColor: false,
+                pyramHeight: 5
+            })
+        }, 0)
+    })
+    
+</script>
+
+</body>
+</html>
