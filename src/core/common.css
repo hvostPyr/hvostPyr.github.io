@@ -8,8 +8,6 @@
 
 .winners{
 	width: 70%;
-	height: 200px;
-	
 }
 
 
@@ -85,7 +83,7 @@ body {
     justify-content: space-between;
     min-height: 100vh;
     backdrop-filter: blur(50px);
-	background: url('../img/wild-back.jpg') ;
+	/* background: url('../img/wild-back.jpg') ; */
 }
 
 .container {
@@ -243,6 +241,3 @@ p {
  
    
 }
-
-
-

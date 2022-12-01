@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Уровень 2 </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <link rel="stylesheet" href="../css/common.css"> -->
+    
+</head>
+<body>
+
+<div class=" blur">
+	<p>Правила уровня 2:</p>
+	<p>-Собирайте пирамидку от большего к меньшему. Цвета не важны</p>
+	
+	<div class = "root"></div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => {
+            const name = prompt('Введите имя пользователя', ' ') || 'guest'
+            localStorage.setItem('currentUser', name);
+            document.querySelector('.auth').innerHTML = `Вы авторизовались как ${name}`
+
+            new window.Game({
+                rootNode: document.querySelector('.root'),
+                username: name,
+                level: 2,
+                dropInterval: 2,
+                dropSpeed: 8,
+                checkSize: true,
+                checkColor: false,
+                pyramHeight: 5
+            })
+        }, 0)
+    })
+</script>
+</body>
+</html>

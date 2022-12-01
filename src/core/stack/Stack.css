@@ -1,0 +1,17 @@
+.stack {
+    width: 100%;
+    height: 300px;
+    border: 1px solid red;
+    margin: 50px;
+
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: end;
+}
+
+.stack-elem {
+    border: 1px solid black;
+    background-color: #eee;
+    height: 40px
+};
