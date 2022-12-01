@@ -41,7 +41,7 @@ export default class Stack {
     addElem(size, color) {
         this.renderElement(size, color)
 
-        if (this.checkSize && this.elems.length && size > this.elems[this.elems.length-1]) {
+        if (this.checkSize && this.elems.length && size < this.elems[this.elems.length-1]) {
             this.handleEnd(false)
             return 
         }
