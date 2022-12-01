@@ -87,7 +87,7 @@ export default class Stack {
             alert(`Вы молодец набрали целые ${this.elems.length * 10} очков`);
             const scores = JSON.parse(localStorage.getItem('scores')) || {}
             scores[this.config.username] = scores[this.config.username] || new Array(3)
-            scores[this.config.username][this.config.level-1] = this.elems.length * 10 + 100/(Date.now() - this.config.startTime)
+            scores[this.config.username][this.config.level-1] = this.elems.length * 10 + 10000/(Date.now() - this.config.startTime)
             localStorage.setItem('scores', JSON.stringify(scores));
 
         }
