@@ -16,14 +16,6 @@ const config = {
   mode: "development",
   plugins: [
     new HtmlWebpackPlugin({
-        template: "./public/example.html",
-        filename: "exapmle.html"
-    }),
-    new HtmlWebpackPlugin({
-        template: "./public/second.html",
-        filename: "second.html"
-    }),
-    new HtmlWebpackPlugin({
         template: "./public/index.html",
         filename: "index.html"
     }),
