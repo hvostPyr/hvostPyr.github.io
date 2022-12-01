@@ -17,7 +17,7 @@
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
-            const name = prompt('Введите имя пользователя', ' ') || 'guest'
+            const name = prompt('Введите имя пользователя', '') || 'guest'
             localStorage.setItem('currentUser', name);
             document.querySelector('.auth').innerHTML = `Вы авторизовались как ${name}`
 
