@@ -48,7 +48,7 @@ export default class Stack {
             return 
         }
 
-        if (this.checkColor && this.elems.length && color !== this.elemsC[this.elemsC.length-1]) {
+        if (this.checkColor && this.elems.length && color === this.elemsC[this.elemsC.length-1]) {
             console.log(color + " цвет "+ this.elemsC[this.elemsC.length-1])
             this.handleEnd(false)
             return 
