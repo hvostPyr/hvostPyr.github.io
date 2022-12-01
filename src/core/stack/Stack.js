@@ -11,6 +11,7 @@ export default class Stack {
         this.render()
         this.bindEvents()
         this.elems = []
+        this.elemsC = []
     }
 
 
@@ -41,17 +42,20 @@ export default class Stack {
     addElem(size, color) {
         this.renderElement(size, color)
 
-        if (this.checkSize && this.elems.length && size < this.elems[this.elems.length-2]) {
+        if (this.checkSize && this.elems.length && size < this.elems[this.elems.length-1]) {
+            console.log(size + " размер "+ this.elems[this.elems.length-1])
             this.handleEnd(false)
             return 
         }
 
-        if (this.checkColor && this.elems.length && color !== this.elems[0]) {
+        if (this.checkColor && this.elems.length && color !== this.elemsC[this.elemsC.length-1]) {
+            console.log(color + " цвет "+ this.elemsC[this.elemsC.length-1])
             this.handleEnd(false)
             return 
         }
         
         this.elems.push(size)
+        this.elemsC.push(color)
         
 
         if (this.pyramHeight === this.elems.length) {
