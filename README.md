@@ -1,1 +1,1 @@
-# gamePiramyd.github.io
+# https://gamePiramyd.github.io
