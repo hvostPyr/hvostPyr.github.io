@@ -5,7 +5,7 @@ export default class Dropbox {
     constructor(config) {
         this.config = config
 
-        this.elSizes = [20, 30, 50, 100, 150]
+        this.elSizes = [20, 30, 50, 100, 150, 300]
         this.elColors = ['#DC143C', '#FF8C00', '#90EE90', '#4169E1']
         this.dropInterval = config.dropInterval*1000
         this.dropSpeed = config.dropSpeed
