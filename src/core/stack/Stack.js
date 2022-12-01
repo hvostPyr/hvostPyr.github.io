@@ -84,7 +84,7 @@ export default class Stack {
 
     handleEnd(res) {
         if (res) {
-            var poi = Math.floor(this.elems.length * 10 + 300000/(Date.now() - this.config.startTime)*100)/100
+            var poi = Math.floor((this.elems.length * 10 + 300000/(Date.now() - this.config.startTime))*100)/100
             alert(`Вы молодец набрали целые ${poi} очков`);
             const scores = JSON.parse(localStorage.getItem('scores')) || {}
             scores[this.config.username] = scores[this.config.username] || new Array(3)
