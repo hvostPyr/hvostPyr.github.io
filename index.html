@@ -71,26 +71,39 @@
 		level3: 2000,
 	  },
 	};
+	
+	var data2 = {
+	  name: 'Hvosten2',
+	  items: {
+		leve11: 10,
+		level2: 100,
+		level3: 2000,
+	  },
+	};
 
 	// объект в json
-	var json = JSON.stringify(data); // {"name":"Hvosten","items":{"level1":1,"level2":1,"level3":2}}
+	var json = JSON.stringify(data);
+	var json2 = JSON.stringify(data2);	// {"name":"Hvosten","items":{"level1":1,"level2":1,"level3":2}}
 
 	// json в объект
 	var obj = JSON.parse(json); // объект
 
-
+	var datas = {json, json2}
+	
 	//Когда получаем json- преобразуем его в объект, а дальше уже в зависимости от структуры данных
-	var data = JSON.parse(json);
+	
+	for (var j in datas){
+		var data = JSON.parse(j);
 
-	var header = '<h2>Gamer name ' + data.name + '</h2>';
-	var list = '';
+		var header = '<h2>Gamer name ' + data.name + '</h2>';
+		var list = '';
 
-	for (var i in data.items) {
-	  list += '<li>' + i + ': ' + data.items[i] + ' шт. </li>';
-	}
+		for (var i in data.items) {
+		  list += '<li>' + i + ': ' + data.items[i] + ' шт. </li>';
+		}
 
-	document.getElementById('winners').innerHTML += header;
-	document.getElementById('winners').innerHTML += '<ul>' + list + '</ul>';
+		document.getElementById('winners').innerHTML += header;
+		document.getElementById('winners').innerHTML += '<ul>' + list + '</ul>';
 	
 	</script>
 </div>
