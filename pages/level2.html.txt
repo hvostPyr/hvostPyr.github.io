@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Уровень 2 </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../css/common.css">
+    
+</head>
+<body>
+
+<div class=" blur">
+	<p>Правила уровня 2:</p>
+	<p>-Собирайте пирамидку от большего к меньшему. Цвета не важны</p>
+	
+	<div class = "game"></div>
+</div>
+</body>
+</html>
