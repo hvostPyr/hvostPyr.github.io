@@ -84,10 +84,11 @@ export default class Stack {
 
     handleEnd(res) {
         if (res) {
-            alert(`Вы молодец набрали целые ${this.elems.length * 10 + 300000/(Date.now() - this.config.startTime)} очков`);
+            var poi = this.elems.length * 10 + 300000/(Date.now() - this.config.startTime)
+            alert(`Вы молодец набрали целые ${poi} очков`);
             const scores = JSON.parse(localStorage.getItem('scores')) || {}
             scores[this.config.username] = scores[this.config.username] || new Array(3)
-            scores[this.config.username][this.config.level-1] = this.elems.length * 10 + 300000/(Date.now() - this.config.startTime)
+            scores[this.config.username][this.config.level-1] = poi
             localStorage.setItem('scores', JSON.stringify(scores));
 
         }
