@@ -80,14 +80,14 @@ export default class Stack {
 
     handleEnd(res) {
         if (res) {
-            alert(`пабедка. ты набрал ${this.elems.length * 10} очков`);
+            alert(`Вы молодец набрали целые ${this.elems.length * 10} очков`);
             const scores = JSON.parse(localStorage.getItem('scores')) || {}
             scores[this.config.username] = scores[this.config.username] || new Array(3)
             scores[this.config.username][this.config.level-1] = this.elems.length * 10
             localStorage.setItem('scores', JSON.stringify(scores));
 
         }
-        else alert('луз')
+        else alert('Вы проиграли, попробуйте снова')
         window.location.href = './index.html'
         this.config.stop && this.config.stop()
     }
