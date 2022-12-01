@@ -17,7 +17,10 @@
 	<p>- В правой области будут появляться и падать колечки для сбора пирамиды</p>
 	<p>- В зависимости от правил уровня вам потребуется собрать пирамиду по заданным правилам</p>
 	<p>- Перетаскивать колечки в левую область с основой пирамиды можно драг-н-дропом</p>
+	</br>
+	<p>Таблица игроков</p>
 	<p id = "winners" class = "winners">
+		
 	</p>
 	<div class="table">
 					<h3 class="title"> Уровни</h3>
@@ -77,7 +80,7 @@
 
     console.log(datas)
     Object.keys(datas).forEach(name => {
-        let header = '<h2>Gamer name ' + name + '</h2></br>';
+        let header = '</br></br><h2>Gamer name ' + name + '</h2></br>';
 		let list = '';
 
         datas[name].forEach((score, i) => {
