@@ -19,8 +19,8 @@
 <div class=" blur1">
 	
 	
-	<div>
-		<div>
+	<div class = "rules">
+		<div >
 			</br><h2 id = "curnam"></h2>
 		</div>
 		<p>Правила игры:</p>
@@ -98,15 +98,22 @@
 	<script>
 	
 
-	var nameC='Guest'
+	var nameC=localStorage.getItem('currentUser')
+	if (nameC!==null){
+		document.getElementById('curnam').innerText = 'Current gamer name ' + nameC;
+	} else{localStorage.setItem('currentUser', 'Guest');}
+	
+	
 
 	var handleSubmit = (e) => {
 		e.preventDefault()
-		var nameC = document.getElementById("login").value;
+		nameC = document.getElementById("login").value;
 		console.log(nameC);
-		localStorage.setItem('currentUser', nameC);
+		localStorage.setItem('currentUser', nameC)
 		document.getElementById('curnam').innerText = 'Current gamer name ' + nameC;
 	}
+
+	
 	document.getElementById("submit").addEventListener('click', handleSubmit)
 
 	
