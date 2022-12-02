@@ -64,8 +64,13 @@
         transform: rotate(0);
     }
 
+    75%{
+        transform: rotate(45deg);
+
+    }
+
     100% {
-      transform: rotate(45deg);
+      transform: rotate(0);
     }
   }
   
