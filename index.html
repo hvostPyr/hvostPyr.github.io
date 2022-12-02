@@ -17,6 +17,8 @@
 	</form>
 </div>
 <div class=" blur1">
+	
+	
 	<div>
 		<div>
 			</br><h2 id = "curnam">Gamer name Guest'</h2>
@@ -26,10 +28,28 @@
 		<p>- В зависимости от правил уровня вам потребуется собрать пирамиду по заданным правилам</p>
 		<p>- Перетаскивать колечки в левую область с основой пирамиды можно драг-н-дропом</p>
 		</br>
-		<p>Таблица игроков</p>
-		<p id = "winners" class = "winners">
+		<!--<button id="show-modal" class="btn" data-toggle="modal">Таблица игроков</button>-->
+		<a href="#openModal">Открыть модальное окно</a>
+
+ 
+
+		<div id="openModal" class="modalDialog">
+
+			<div>
+
+				<a href="#close" title="Закрыть" class="close">X</a>
+
+				<h2>Таблица результатов</h2>
+
+				<p id = "winners" class = "winners"></p>
+
+			</div>
+
+		</div>
+
+		
 			
-		</p>
+		
 	</div>
 	<div>
 		<div class="table">
@@ -74,7 +94,25 @@
 						</div>
 		</div>
 	</div>
+
 	<script>
+	// создаём модальное окно
+	var elemTarget;
+	var modal = $modal({
+    title: 'Просмотр изображения',
+    content: '<p id = "winners" class = "winners">',
+    footerButtons: [
+      { class: 'btn btn__cancel', text: 'Закрыть', handler: 'modalHandlerCancel' }
+    ]
+  	});
+  // при клике по кнопке #show-modal
+  	document.querySelector('#show-modal').addEventListener('click', function(e) {
+		elemTarget = e.target;
+    	modal.show();
+		if (e.target.dataset.handler === 'modalHandlerCancel') {
+		modal.hide();}
+  	});
+
 	var nameC='Guest'
 
 	var handleSubmit = (e) => {

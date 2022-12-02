@@ -8,15 +8,30 @@
 <body>
 
 <div class=" blur">
-	<p>Правила уровня 3:</p>
+    <div class="highParal">  
+        <div>
+            p>Правила уровня 3:</p>
 	<p>- Соберите пирамиду по правилам от большего к меньше. Цвета соседних колечек должны отличаться</p>
     <p>- Баллы также начисляются за скорость - чем быстрее, тем больше баллов.</p>
     <p>- Надо собрать пирамидку из 6 блоков</p>
-	<div class="auth"></div>
+        </div>
+        <div>
+        <div class="auth"></div>
+        <form>
+            <button class ="butExit" id="submit" >Выйти</button>
+        </form>
+        </div>
+    </div>
 	<div class = "root"></div>
 </div>
 
 <script>
+    var handleSubmit = (e) => {
+		e.preventDefault()
+		window.location.href = './index.html'
+	}
+    document.getElementById("submit").addEventListener('click', handleSubmit)
+
     document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             const name = localStorage.getItem('currentUser')
