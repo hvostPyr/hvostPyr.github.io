@@ -9,8 +9,8 @@
 
 <div class=" blur">
     <div class="highParal">  
-        <div>
-            p>Правила уровня 3:</p>
+        <div class="rules">
+            <p><b>Правила уровня 3:</b></p>
 	<p>- Соберите пирамиду по правилам от большего к меньше. Цвета соседних колечек должны отличаться</p>
     <p>- Баллы также начисляются за скорость - чем быстрее, тем больше баллов.</p>
     <p>- Надо собрать пирамидку из 6 блоков</p>
@@ -36,7 +36,7 @@
         setTimeout(() => {
             const name = localStorage.getItem('currentUser')
             //localStorage.setItem('currentUser', name);
-            document.querySelector('.auth').innerHTML = `Вы авторизовались как ${name}`
+            document.querySelector('.auth').innerHTML = `Вы авторизовались как <b>${name}</b>`
 
             new window.Game({
                 rootNode: document.querySelector('.root'),
