@@ -92,6 +92,7 @@ export default class Stack {
         var boxElement = document.getElementsByClassName('stack')
 
         boxElement[0].style.animationName = 'slideOver'
+        boxElement[0].style.animationDuration = 2300 + 'ms'
         
           
       }

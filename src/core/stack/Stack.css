@@ -17,10 +17,12 @@
     background-color: #eee;
     height: 40px;
 
-    /*animation-name: slideUp;
+    animation-name: slideUp;
 
   
-    animation-duration: 2300ms;*/
+    animation-duration: 2300ms;
+
+
 };
 
 .stack.active {
@@ -42,7 +44,7 @@
   
   @keyframes slideUp {
     0% {
-      transform: translateY(-25%);
+      transform: translateY(-50%);
     }
     100% {
       transform: translateY(0%);
@@ -51,15 +53,15 @@
 
   @keyframes slideOver {
     0% {
-      transform: translateY(0);
+      transform: rotate(0);
     }
 
     50% {
-        transform: translateY(50%);
+        transform: rotate(180deg);
       }
 
     100% {
-      transform: translateY(100%);
+      transform: rotate(360deg);
     }
   }
   
