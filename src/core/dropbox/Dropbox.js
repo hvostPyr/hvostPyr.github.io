@@ -37,6 +37,7 @@ export default class Dropbox {
     createRandomElement() {
         const elSize = this.elSizes.sort(() => Math.random()-0.5)[0]
         const elcolor = this.elColors.sort(() => Math.random() - 0.5)[0]
+        const elLeft = this.elLefts.sort(() => Math.random()-0.5)[0]
 
         const elem = document.createElement('div')
         elem.setAttribute('draggable', true)
@@ -48,7 +49,7 @@ export default class Dropbox {
         elem.style['background-color'] = elcolor
         elem.style.width = elSize+'px'
         elem.style.height = '40px'
-        elem.style.left = this.elLefts.sort(() => Math.random()-0.5)[0]
+        elem.style.left = elLeft + '%'
         document.body.style.setProperty('--drop-speed', `${this.dropSpeed}s`)
 
         const remover = () => {elem && this.rootNode.removeChild(elem)}
