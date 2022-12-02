@@ -21,7 +21,7 @@
 	
 	<div>
 		<div>
-			</br><h2 id = "curnam">Gamer name Guest'</h2>
+			</br><h2 id = "curnam">Current gamer name Guest</h2>
 		</div>
 		<p>Правила игры:</p>
 		<p>- В правой области будут появляться и падать колечки для сбора пирамиды</p>
@@ -29,7 +29,7 @@
 		<p>- Перетаскивать колечки в левую область с основой пирамиды можно драг-н-дропом</p>
 		</br>
 		<!--<button id="show-modal" class="btn" data-toggle="modal">Таблица игроков</button>-->
-		<a href="#openModal" class = "modalOpen">Открыть таблицу результатов</a>
+		<a href="#openModal" class = "modalOpen">  Открыть таблицу результатов  </a>
 
  
 
@@ -105,7 +105,7 @@
 		var nameC = document.getElementById("login").value;
 		console.log(nameC);
 		localStorage.setItem('currentUser', nameC);
-		document.getElementById('curnam').innerText = 'Gamer name ' + nameC;
+		document.getElementById('curnam').innerText = 'Current gamer name ' + nameC;
 	}
 	document.getElementById("submit").addEventListener('click', handleSubmit)
 
