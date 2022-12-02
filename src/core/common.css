@@ -12,6 +12,7 @@
 }
 
 
+
 .header, .footer {
     display: flex;
     justify-content: space-between;
@@ -34,13 +35,7 @@
 }
 
 
-.logo {
-    
-    position: absolute;
-    align-self: start;
-    width: 13vh;
-    height: 10vh;
-}
+
 
 
 
