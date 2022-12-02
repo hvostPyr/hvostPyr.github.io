@@ -51,17 +51,21 @@
     }
   }
 
-  @keyframes slideOver {
+  @keyframes rotateOver {
     0% {
       transform: rotate(0);
     }
 
-    50% {
-        transform: rotate(180deg);
+    25% {
+        transform: rotate(-45deg);
       }
+    
+    50% {
+        transform: rotate(0);
+    }
 
     100% {
-      transform: rotate(360deg);
+      transform: rotate(45deg);
     }
   }
   
