@@ -66,6 +66,16 @@
     
 }
 
+.basePyr{
+    display: absolute;
+    z-index: -1;
+    height: 305px;
+    width: 40px;
+    background-color: blanchedalmond;
+    border-radius: 10%;
+
+}
+
 
 
 

@@ -18,7 +18,11 @@ export default class Stack {
     render() {
         const el = document.createElement('div')
         el.classList.add('stack')
+        const ba = document.createElement('div')
+        ba.classList.add('basePyr')
+        
         this.rootNode.appendChild(el)
+        el.appendChild(ba)
         this.rootNode = el
     }
 
@@ -84,7 +88,6 @@ export default class Stack {
 
     handleEnd(res) {
         if (res) {
-            var poi = Math.floor((this.elems.length * 10 + 300000/(Date.now() - this.config.startTime))*100)/100
             alert(`Вы молодец набрали целые ${poi} очков`);
             const scores = JSON.parse(localStorage.getItem('scores')) || {}
             scores[this.config.username] = scores[this.config.username] || new Array(3)
