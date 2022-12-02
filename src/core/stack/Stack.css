@@ -15,3 +15,12 @@
     background-color: #eee;
     height: 40px
 };
+
+@keyframes dribble_end {
+    0% {
+        rotate: -40%;
+    }
+    100% {
+        rotate: 40%;
+    }
+}

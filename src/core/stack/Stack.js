@@ -88,6 +88,7 @@ export default class Stack {
     }
 
     handleEnd(res) {
+        //this.dribble_end
         var end = Date.now() - this.start 
         console.log(end)
         var poi = Math.floor((this.elems.length * 10) + (100000/end))
