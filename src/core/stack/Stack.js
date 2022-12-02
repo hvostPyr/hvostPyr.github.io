@@ -9,6 +9,7 @@ export default class Stack {
         this.pyramHeight = config.pyramHeight
         this.rootNode = config.rootNode
         this.render()
+        this.start = config.startTime
         this.bindEvents()
         this.elems = []
         this.elemsC = []
@@ -87,6 +88,9 @@ export default class Stack {
     }
 
     handleEnd(res) {
+        var end = Date.now() - this.start 
+        console.log(end)
+        var poi = Math.floor((this.elems.length * 10) + (100000/end))
         if (res) {
             alert(`Вы молодец набрали целые ${poi} очков`);
             const scores = JSON.parse(localStorage.getItem('scores')) || {}

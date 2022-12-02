@@ -66,6 +66,18 @@
     
 }
 
+.butExit{
+
+    width: 100px;
+    height: 50px;
+
+}
+
+.highParal{
+    display: flex;
+    flex-direction: row;
+}
+
 .basePyr{
     position: absolute;
     z-index: -1;
