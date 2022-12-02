@@ -98,7 +98,12 @@
 	<script>
 	
 
-	var nameC='Guest'
+	var nameC=localStorage.getItem('currentUser')
+	if (nameC!==null){
+		document.getElementById('curnam').innerText = 'Current gamer name ' + nameC;
+	}
+	
+	
 
 	var handleSubmit = (e) => {
 		e.preventDefault()

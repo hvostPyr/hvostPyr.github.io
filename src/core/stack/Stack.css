@@ -16,11 +16,37 @@
     height: 40px
 };
 
-@keyframes dribble_end {
+.stack.active {
+   
+        transform: translateX(0);
+        transition: transform .5s;
+
+}
+
+.slideUp {
+    animation-name: slideRight;
+    -webkit-animation-name: slideRight;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: ease-in-out;
+    visibility: visible !important;
+  }
+  
+  @keyframes slideRight {
     0% {
-        rotate: -40%;
+      transform: translateY(-25%);
     }
     100% {
-        rotate: 40%;
+      transform: translateY(0%);
     }
-}
+  }
+  
+  @-webkit-keyframes slideRight {
+    0% {
+      -webkit-transform: translateY(-25%);
+    }
+    100% {
+      -webkit-transform: translateY(0%);
+    }
+  }
