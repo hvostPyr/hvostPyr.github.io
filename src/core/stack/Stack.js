@@ -19,6 +19,7 @@ export default class Stack {
     render() {
         const el = document.createElement('div')
         el.classList.add('stack')
+        
         const ba = document.createElement('div')
         ba.classList.add('basePyr')
         
@@ -87,11 +88,21 @@ export default class Stack {
         this.rootNode.appendChild(elem)
     }
 
+    openLangs() {
+        var boxElement = document.getElementsByClassName('stack')
+
+        boxElement[0].style.animationName = 'slideOver'
+        
+          
+      }
+
     handleEnd(res) {
-        //this.dribble_end
+        this.openLangs()
         var end = Date.now() - this.start 
         console.log(end)
         var poi = Math.floor((this.elems.length * 10) + (100000/end))
+
+        setTimeout(()=>{
         if (res) {
             alert(`Вы молодец набрали целые ${poi} очков`);
             const scores = JSON.parse(localStorage.getItem('scores')) || {}
@@ -103,6 +114,7 @@ export default class Stack {
         else alert('Вы проиграли, попробуйте снова')
         window.location.href = './index.html'
         this.config.stop && this.config.stop()
+        },1000)
     }
 
 }
