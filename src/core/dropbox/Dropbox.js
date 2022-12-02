@@ -6,6 +6,7 @@ export default class Dropbox {
         this.config = config
 
         this.elSizes = [20, 30, 50, 100, 150, 300]
+        this.elLefts = [10, 20, 22, 35, 15, 2]
         this.elColors = ['#DC143C', '#FF8C00', '#90EE90', '#4169E1']
         this.dropInterval = config.dropInterval*1000
         this.dropSpeed = config.dropSpeed
@@ -47,6 +48,7 @@ export default class Dropbox {
         elem.style['background-color'] = elcolor
         elem.style.width = elSize+'px'
         elem.style.height = '40px'
+        elem.style.left = this.elLefts.sort(() => Math.random()-0.5)[0]
         document.body.style.setProperty('--drop-speed', `${this.dropSpeed}s`)
 
         const remover = () => {elem && this.rootNode.removeChild(elem)}
