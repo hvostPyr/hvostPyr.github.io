@@ -11,14 +11,14 @@
 
 <div class = "header">
 	<h3 class="head_font" align="center">Игра "Собери пирамидку"</h3>
-	<form onsubmit>
-		<input type="text" value="Guest" placeholder="Никнейм" name="login" />
-		<input type="submit" class="btn" data-toggle="modal-1" value="Ввести пользователя" />
+	<form id="form">
+		<input id="login" type="text" value="Guest" placeholder="Никнейм" name="login" />
+		<button id="submit" class="btn" data-toggle="modal-1">Ввести пользователя</button>
 	</form>
 </div>
 <div class=" blur">
-	<div id = "curnam">
-
+	<div>
+		</br><h2 id = "curnam">Gamer name Guest'</h2>
 	</div>
 	<p>Правила игры:</p>
 	<p>- В правой области будут появляться и падать колечки для сбора пирамиды</p>
@@ -72,17 +72,18 @@
 	</div>
 	
 	<script>
-	document.addEventListener('onsubmit', () => {
-		var handleSubmit = (e) => {
-			e.preventDefault()
-			var name = e.target.login
-			console.log(name);
-			localStorage.setItem('currentUser', name);
-		}
-	})
+	var nameC="Guest"
+
+	var handleSubmit = (e) => {
+		e.preventDefault()
+		var nameC = document.getElementById("login").value;
+		console.log(nameC);
+		localStorage.setItem('currentUser', nameC);
+		document.getElementById('curnam').innerText = 'Gamer name ' + nameC;
+	}
+	document.getElementById("submit").addEventListener('click', handleSubmit)
 
 	
-	document.getElementById('curnam').innerHTML += name;
 
 
 
