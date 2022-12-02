@@ -18,10 +18,13 @@
 </div>
 
 <script>
+   
+
+
     document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
-            const name = prompt('Введите имя пользователя', '') || 'guest'
-            localStorage.setItem('currentUser', name);
+            const name = localStorage.getItem('currentUser')
+            //localStorage.setItem('currentUser', name);
             document.querySelector('.auth').innerHTML = `Вы авторизовались как ${name}`
 
             new window.Game({
