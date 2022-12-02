@@ -11,7 +11,7 @@
 
 <div class = "header">
 	<h3 class="head_font" align="center">Игра "Собери пирамидку"</h3>
-	<form onsubmit={}>
+	<form onsubmit>
 		<input type="text" value="Guest" placeholder="Никнейм" name="login" />
 		<input type="submit" class="btn" data-toggle="modal-1" value="Ввести пользователя" />
 	</form>
@@ -72,12 +72,14 @@
 	</div>
 	
 	<script>
-
-	var handleSubmit = (e) => {
-		e.preventDefault()
-		var name = e.target.login
-		localStorage.setItem('currentUser', name);
-	}
+	document.addEventListener('onsubmit', () => {
+		var handleSubmit = (e) => {
+			e.preventDefault()
+			var name = e.target.login
+			console.log(name);
+			localStorage.setItem('currentUser', name);
+		}
+	})
 
 	
 	document.getElementById('curnam').innerHTML += name;

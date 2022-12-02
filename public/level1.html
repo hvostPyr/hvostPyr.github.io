@@ -24,7 +24,7 @@
 	footerButtons: [
     { class: 'btn btn__cancel', text: 'Отмена', handler: 'modalHandlerCancel' },
     { class: 'btn btn__ok', text: 'ОК', handler: 'modalHandlerOk' }
-   ]
+    ]
 
 	});
 	document.addEventListener('click', function(e) {
@@ -34,12 +34,13 @@
       modal.hide();
     } else if (e.target.dataset.handler === 'modalHandlerDelete') {
       elemTarget.parentElement.removeChild(elemTarget);
-      modal.hide();
+      modal.hide();}
+    }),
 
 
     document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
-            const name = localStorage.getItem('currenUser')
+            const name = localStorage.getItem('currentUser')
             //localStorage.setItem('currentUser', name);
             document.querySelector('.auth').innerHTML = `Вы авторизовались как ${name}`
 
