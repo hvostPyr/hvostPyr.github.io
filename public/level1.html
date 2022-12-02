@@ -10,8 +10,8 @@
 
 <div class=" blur">
     <div class="highParal">  
-        <div>
-            <p>Правила уровня 1:</p>
+        <div class="rules">
+            <p><b>Правила уровня 1:</b></p>
             <p>- Почувствуйте себя ребенком, просто соберите пирамидку без правил.</p>
             <p>- Баллы также начисляются за скорость - чем быстрее, тем больше баллов.</p>
             <p>- Надо собрать пирамидку из 5 блоков</p>
@@ -38,7 +38,7 @@
         setTimeout(() => {
             const name = localStorage.getItem('currentUser')
             //localStorage.setItem('currentUser', name);
-            document.querySelector('.auth').innerHTML = `Вы авторизовались как ${name}`
+            document.querySelector('.auth').innerHTML = `Вы авторизовались как <b> ${name}</b>`
 
             new window.Game({
                 rootNode: document.querySelector('.root'),

@@ -65,11 +65,15 @@
     background-color:mediumseagreen;
     
 }
+.rules{
+    padding-right: 3%;
 
+}
 .modalOpen{
     width: 150px;
     background-color: #6495ED;
-
+    padding-left: 5%;
+    padding-right: 5%;
     
 
 }
