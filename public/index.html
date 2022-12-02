@@ -101,7 +101,7 @@
 	var nameC=localStorage.getItem('currentUser')
 	if (nameC!==null){
 		document.getElementById('curnam').innerText = 'Current gamer name ' + nameC;
-	}
+	} else{localStorage.setItem('currentUser', 'Guest');}
 	
 	
 
