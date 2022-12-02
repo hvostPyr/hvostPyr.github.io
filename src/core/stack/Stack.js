@@ -98,7 +98,7 @@ export default class Stack {
       }
 
     handleEnd(res) {
-        this.openLangs()
+        if(res){this.openLangs()}
         var end = Date.now() - this.start 
         console.log(end)
         var poi = Math.floor((this.elems.length * 10) + (100000/end))
