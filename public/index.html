@@ -73,14 +73,13 @@
 	
 	<script>
 
-	var name = 'Guest';
 	var handleSubmit = (e) => {
 		e.preventDefault()
-		name = e.target.login
+		var name = e.target.login
+		localStorage.setItem('currentUser', name);
 	}
 
 	
-
 	document.getElementById('curnam').innerHTML += name;
 
 

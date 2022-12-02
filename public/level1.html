@@ -18,10 +18,29 @@
 </div>
 
 <script>
+    var modal1 = $modal({
+	title: 'Правила',
+	content: '- Почувствуйте себя ребенком, просто соберите пирамидку без правил.',
+	footerButtons: [
+    { class: 'btn btn__cancel', text: 'Отмена', handler: 'modalHandlerCancel' },
+    { class: 'btn btn__ok', text: 'ОК', handler: 'modalHandlerOk' }
+   ]
+
+	});
+	document.addEventListener('click', function(e) {
+    if (e.target.dataset.toggle === 'modal') {
+      modal.show();
+    }else if (e.target.dataset.handler === 'modalHandlerCancel') {
+      modal.hide();
+    } else if (e.target.dataset.handler === 'modalHandlerDelete') {
+      elemTarget.parentElement.removeChild(elemTarget);
+      modal.hide();
+
+
     document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
-            const name = prompt('Введите имя пользователя', '') || 'guest'
-            localStorage.setItem('currentUser', name);
+            const name = localStorage.getItem('currenUser')
+            //localStorage.setItem('currentUser', name);
             document.querySelector('.auth').innerHTML = `Вы авторизовались как ${name}`
 
             new window.Game({
