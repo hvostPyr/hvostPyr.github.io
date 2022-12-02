@@ -16,63 +16,66 @@
 		<button id="submit" class="btn" data-toggle="modal-1">Ввести пользователя</button>
 	</form>
 </div>
-<div class=" blur">
+<div class=" blur1">
 	<div>
-		</br><h2 id = "curnam">Gamer name Guest'</h2>
+		<div>
+			</br><h2 id = "curnam">Gamer name Guest'</h2>
+		</div>
+		<p>Правила игры:</p>
+		<p>- В правой области будут появляться и падать колечки для сбора пирамиды</p>
+		<p>- В зависимости от правил уровня вам потребуется собрать пирамиду по заданным правилам</p>
+		<p>- Перетаскивать колечки в левую область с основой пирамиды можно драг-н-дропом</p>
+		</br>
+		<p>Таблица игроков</p>
+		<p id = "winners" class = "winners">
+			
+		</p>
 	</div>
-	<p>Правила игры:</p>
-	<p>- В правой области будут появляться и падать колечки для сбора пирамиды</p>
-	<p>- В зависимости от правил уровня вам потребуется собрать пирамиду по заданным правилам</p>
-	<p>- Перетаскивать колечки в левую область с основой пирамиды можно драг-н-дропом</p>
-	</br>
-	<p>Таблица игроков</p>
-	<p id = "winners" class = "winners">
-		
-	</p>
-	<div class="table">
-					<h3 class="title"> Уровни</h3>
-					<p class="descr"> Это уровни с разными особенностями и сложностью</p>
+	<div>
+		<div class="table">
+						<h3 class="title"> Уровни</h3>
+						<p class="descr"> Это уровни с разными особенностями и сложностью</p>
 
-					<div class="table__item">
+						<div class="table__item">
 
-						<div class="item__info ">
-							<h4>Уровень 1</h4>
-							<p>Для пробы</p>
-						</div>
-						
-						<a class="item__href" href=" ./level1.html"></a>
-					</div>
-
-					<div class="table__item">
-						<div class="item__info ">
-							<h4>Уровень 2</h4>
-							<p>Уже посложнее</p>
-						</div>
-						
-						<a class="item__href" href=" ./level2.html"></a>
-					</div>
-
-					<div class="table__item">
-						<div class="item__info ">
-							<h4>Уровень 3</h4>
-							<p>Повышенная сложность</p>
-						</div>
-						
-						<a class="item__href" href=" ./level3.html"></a>
-					</div>
-
-
-					<div class="table__item">
-						<div class="item__info">
-							<h4>Неизвестно</h4>
-							<p>Вакантное место</p>
+							<div class="item__info ">
+								<h4>Уровень 1</h4>
+								<p>Для пробы</p>
+							</div>
+							
+							<a class="item__href" href=" ./level1.html"></a>
 						</div>
 
-					</div>
+						<div class="table__item">
+							<div class="item__info ">
+								<h4>Уровень 2</h4>
+								<p>Уже посложнее</p>
+							</div>
+							
+							<a class="item__href" href=" ./level2.html"></a>
+						</div>
+
+						<div class="table__item">
+							<div class="item__info ">
+								<h4>Уровень 3</h4>
+								<p>Повышенная сложность</p>
+							</div>
+							
+							<a class="item__href" href=" ./level3.html"></a>
+						</div>
+
+
+						<div class="table__item">
+							<div class="item__info">
+								<h4>Неизвестно</h4>
+								<p>Вакантное место</p>
+							</div>
+
+						</div>
+		</div>
 	</div>
-	
 	<script>
-	var nameC="Guest"
+	var nameC='Guest'
 
 	var handleSubmit = (e) => {
 		e.preventDefault()

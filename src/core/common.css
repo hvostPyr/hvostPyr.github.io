@@ -77,6 +77,14 @@
     width: 100%;
     padding:2rem;
 }
+.blur1 {
+    background: rgba(70, 130, 180, 0.35);
+    display:flex;
+    flex-direction: row;
+    min-height: 100vh;
+    width: 100%;
+    padding:2rem;
+}
 
 body {
     display: flex;
