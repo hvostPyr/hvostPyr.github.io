@@ -8,7 +8,7 @@
 <script defer src="index.bundle.js"></script></head>
 <body>
 
-<div class=" blur">
+<div class=" blur" id = "blur">
     <div class="highParal">  
         <div class="rules">
             <p><b>Правила уровня 1:</b></p>
@@ -28,6 +28,15 @@
 </div>
 
 <script>
+   if(localStorage.getItem('colorin')==='true'){
+		
+		document.getElementById('blur').style.background = 'rgba(70, 130, 180, 0.35)'
+	}
+	else{
+		
+		document.getElementById('blur').style.background = 'rgba(30, 190, 140, 0.35)'
+	}
+
    var handleSubmit = (e) => {
 		e.preventDefault()
 		window.location.href = './index.html'
