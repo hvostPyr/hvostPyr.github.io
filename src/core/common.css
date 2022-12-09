@@ -11,6 +11,15 @@
     
 }
 
+.recolor{
+    background-color: #6495ED;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 45%;
+    height: 8%;
+
+}
+
 
 .header, .footer {
     display: flex;
@@ -199,14 +208,14 @@
 
 
 .blur {
-    background: rgba(70, 130, 180, 0.35);
+    background-color: rgba(70, 130, 180, 0.35);
     
     min-height: 100vh;
     width: 100%;
     padding:2rem;
 }
 .blur1 {
-    background: rgba(70, 130, 180, 0.35);
+    background-color: rgba(70, 130, 180, 0.35);
     display:flex;
     flex-direction: row;
     min-height: 100vh;
