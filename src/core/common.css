@@ -15,8 +15,7 @@
     background-color: #6495ED;
     padding-left: 5%;
     padding-right: 5%;
-    width: 45%;
-    height: 8%;
+    margin-bottom: 5%;
 
 }
 
@@ -68,12 +67,14 @@
 
 }
 .modalOpen{
-    width: 150px;
-    background-color: #6495ED;
-    padding-left: 5%;
-    padding-right: 5%;
     
-
+    background-color: #6495ED;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+.modalRef{
+    padding: 2%;
+    border: 0%;
 }
 
 

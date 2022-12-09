@@ -20,6 +20,7 @@
         <form>
             <button class ="butExit" id="submit" >Выйти</button>
         </form>
+        
         </div>
     </div>
 	<div class = "root"></div>
@@ -34,6 +35,24 @@
 		
 		document.getElementById('blur').style.background = 'rgba(30, 190, 140, 0.35)'
 	}
+
+    function formatTimeLeft(time) {
+    // Наибольшее целое число меньше или равно результату деления времени на 60.
+        const minutes = Math.floor(time / 60);
+        
+        // Секунды – это остаток деления времени на 60 (оператор модуля)
+        let seconds = time % 60;
+        
+        // Если значение секунд меньше 10, тогда отображаем его с 0 впереди 
+        if (seconds < 10) {
+            seconds = `0${seconds}`;
+        }
+
+        // Вывод в формате MM:SS
+        return `${minutes}:${seconds}`;
+    }
+
+
 
     var handleSubmit = (e) => {
 		e.preventDefault()
